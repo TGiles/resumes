@@ -10,9 +10,12 @@ header {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
+    background-image: url("./background.png");
+    background-position: center;
 }
 .heading-wrap {
-    background-color: rgba(112, 128, 144, 0.4);
+    /* background-color: rgba(112, 128, 144, 0.4); */
+    /* background-color: rgba(142, 200, 231, 0.767); */
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
@@ -22,7 +25,10 @@ header {
 .title, .sub-title {
     color: black;
     font-weight: 600;
-    text-transform: uppercase
+    text-transform: uppercase;
+    background-color: white;
+    padding: 0.25rem;
+    margin: 0.25rem;
 }
 
 main {
@@ -104,7 +110,25 @@ li {
     /* font-size: 0.75rem; */
     font-weight: 700;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+.bigWrapper {
+    margin: 1.25rem;
+}
 @media print {
+    html {
+        filter: grayscale(100%);
+    }
     body {
         margin: 0;
     }
@@ -115,6 +139,7 @@ li {
         display: flex;
         flex-direction: column;
         height: 95vh;
+        margin: 0;
     }
     footer {
         margin: auto 0 0 0;
